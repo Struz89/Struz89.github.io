@@ -1,8 +1,9 @@
 $(document).ready(function() {
   const apiRoot = 'https://kodilla-tasks-pstruzyn.herokuapp.com/v1/tasks/';
-  const trelloApiRoot = 'http://localhost:8080/v1/trello';
+  const trelloApiRoot = 'https://api.trello.com/1';
   const datatableRowTemplate = $('[data-datatable-row-template]').children()[0];
   const $tasksContainer = $('[data-tasks-container]');
+  const idTable = 'Ro1wnwgr';
 
   var availableBoards = {};
   var availableTasks = {};
@@ -12,7 +13,7 @@ $(document).ready(function() {
   getAllTasks();
 
   function getAllAvailableBoards(callback, callbackArgs) {
-    var requestUrl = trelloApiRoot + '/boards';
+    var requestUrl = trelloApiRoot + '/boards' + idTable + '/?key=7d2d6f5907b15905e4eef8079e832675&token=7107956229f4b44d01acf0f596f2d77b4e36f6128870af2a90b584fb5837ef88/';
 
     $.ajax({
       url: requestUrl,
