@@ -166,7 +166,7 @@ $(document).ready(function() {
   }
 
   function handleCardCreationRequest(event) {
-    var requestUrl = trelloApiRoot + '/cards';
+    var requestUrl = trelloApiRoot + '/cards?key=7d2d6f5907b15905e4eef8079e832675&token=7107956229f4b44d01acf0f596f2d77b4e36f6128870af2a90b584fb5837ef88';
     var $relatedTaskRow = $(event.target).parents('[data-task-id]');
     var relatedTaskId = $relatedTaskRow.attr('data-task-id');
     var relatedTask = availableTasks[relatedTaskId];
